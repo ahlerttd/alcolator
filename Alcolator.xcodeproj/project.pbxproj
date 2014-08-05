@@ -13,7 +13,6 @@
 		17BAB10C198A6F180083B71F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17BAB10A198A6F180083B71F /* InfoPlist.strings */; };
 		17BAB10E198A6F180083B71F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAB10D198A6F180083B71F /* main.m */; };
 		17BAB112198A6F180083B71F /* BLCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAB111198A6F180083B71F /* BLCAppDelegate.m */; };
-		17BAB115198A6F180083B71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BAB113198A6F180083B71F /* Main.storyboard */; };
 		17BAB118198A6F180083B71F /* BLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAB117198A6F180083B71F /* BLCViewController.m */; };
 		17BAB11A198A6F180083B71F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BAB119198A6F180083B71F /* Images.xcassets */; };
 		17BAB121198A6F190083B71F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BAB120198A6F190083B71F /* XCTest.framework */; };
@@ -21,6 +20,7 @@
 		17BAB123198A6F190083B71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BAB105198A6F180083B71F /* UIKit.framework */; };
 		17BAB12B198A6F190083B71F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17BAB129198A6F190083B71F /* InfoPlist.strings */; };
 		17BAB12D198A6F190083B71F /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAB12C198A6F190083B71F /* AlcolatorTests.m */; };
+		17BAB13819902BD50083B71F /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAB13719902BD50083B71F /* BLCWhiskeyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		17BAB10F198A6F180083B71F /* Alcolator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alcolator-Prefix.pch"; sourceTree = "<group>"; };
 		17BAB110198A6F180083B71F /* BLCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCAppDelegate.h; sourceTree = "<group>"; };
 		17BAB111198A6F180083B71F /* BLCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCAppDelegate.m; sourceTree = "<group>"; };
-		17BAB114198A6F180083B71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17BAB116198A6F180083B71F /* BLCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCViewController.h; sourceTree = "<group>"; };
 		17BAB117198A6F180083B71F /* BLCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCViewController.m; sourceTree = "<group>"; };
 		17BAB119198A6F180083B71F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		17BAB128198A6F190083B71F /* AlcolatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlcolatorTests-Info.plist"; sourceTree = "<group>"; };
 		17BAB12A198A6F190083B71F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17BAB12C198A6F190083B71F /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
+		17BAB13619902BD50083B71F /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWhiskeyViewController.h; sourceTree = "<group>"; };
+		17BAB13719902BD50083B71F /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWhiskeyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +113,10 @@
 		17BAB107198A6F180083B71F /* Alcolator */ = {
 			isa = PBXGroup;
 			children = (
+				17BAB13619902BD50083B71F /* BLCWhiskeyViewController.h */,
+				17BAB13719902BD50083B71F /* BLCWhiskeyViewController.m */,
 				17BAB110198A6F180083B71F /* BLCAppDelegate.h */,
 				17BAB111198A6F180083B71F /* BLCAppDelegate.m */,
-				17BAB113198A6F180083B71F /* Main.storyboard */,
 				17BAB116198A6F180083B71F /* BLCViewController.h */,
 				17BAB117198A6F180083B71F /* BLCViewController.m */,
 				17BAB119198A6F180083B71F /* Images.xcassets */,
@@ -231,7 +233,6 @@
 			files = (
 				17BAB11A198A6F180083B71F /* Images.xcassets in Resources */,
 				17BAB10C198A6F180083B71F /* InfoPlist.strings in Resources */,
-				17BAB115198A6F180083B71F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17BAB112198A6F180083B71F /* BLCAppDelegate.m in Sources */,
+				17BAB13819902BD50083B71F /* BLCWhiskeyViewController.m in Sources */,
 				17BAB10E198A6F180083B71F /* main.m in Sources */,
 				17BAB118198A6F180083B71F /* BLCViewController.m in Sources */,
 			);
@@ -281,14 +283,6 @@
 				17BAB10B198A6F180083B71F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		17BAB113198A6F180083B71F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17BAB114198A6F180083B71F /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		17BAB129198A6F190083B71F /* InfoPlist.strings */ = {
@@ -380,7 +374,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alcolator/Alcolator-Prefix.pch";
 				INFOPLIST_FILE = "Alcolator/Alcolator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,7 +389,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Alcolator/Alcolator-Prefix.pch";
 				INFOPLIST_FILE = "Alcolator/Alcolator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
