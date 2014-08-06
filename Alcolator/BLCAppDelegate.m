@@ -8,14 +8,16 @@
 
 #import "BLCViewController.h"
 #import "BLCAppDelegate.h"
+#import "BLCMainMenuViewController.h"
 
 @implementation BLCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
-    BLCViewController *viewController = [[BLCViewController alloc]init];
-    self.window.rootViewController = viewController;
+    BLCMainMenuViewController *mainMenuViewController = [[BLCMainMenuViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

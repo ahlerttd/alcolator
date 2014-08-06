@@ -21,6 +21,7 @@
 		17BAB12B198A6F190083B71F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17BAB129198A6F190083B71F /* InfoPlist.strings */; };
 		17BAB12D198A6F190083B71F /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAB12C198A6F190083B71F /* AlcolatorTests.m */; };
 		17BAB13819902BD50083B71F /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAB13719902BD50083B71F /* BLCWhiskeyViewController.m */; };
+		17EEEFFF1991712300852302 /* BLCMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EEEFFE1991712300852302 /* BLCMainMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		17BAB12C198A6F190083B71F /* AlcolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorTests.m; sourceTree = "<group>"; };
 		17BAB13619902BD50083B71F /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWhiskeyViewController.h; sourceTree = "<group>"; };
 		17BAB13719902BD50083B71F /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWhiskeyViewController.m; sourceTree = "<group>"; };
+		17EEEFFD1991712300852302 /* BLCMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCMainMenuViewController.h; sourceTree = "<group>"; };
+		17EEEFFE1991712300852302 /* BLCMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCMainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				17BAB117198A6F180083B71F /* BLCViewController.m */,
 				17BAB119198A6F180083B71F /* Images.xcassets */,
 				17BAB108198A6F180083B71F /* Supporting Files */,
+				17EEEFFD1991712300852302 /* BLCMainMenuViewController.h */,
+				17EEEFFE1991712300852302 /* BLCMainMenuViewController.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17BAB112198A6F180083B71F /* BLCAppDelegate.m in Sources */,
+				17EEEFFF1991712300852302 /* BLCMainMenuViewController.m in Sources */,
 				17BAB13819902BD50083B71F /* BLCWhiskeyViewController.m in Sources */,
 				17BAB10E198A6F180083B71F /* main.m in Sources */,
 				17BAB118198A6F180083B71F /* BLCViewController.m in Sources */,
@@ -455,6 +461,7 @@
 				17BAB132198A6F190083B71F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17BAB133198A6F190083B71F /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +470,7 @@
 				17BAB135198A6F190083B71F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@
 
 @interface BLCViewController () <UITextFieldDelegate>
 
-//@property (weak, nonatomic) IBOutlet UILabel *numberOfBeersInLabel;
+@property (weak, nonatomic) UILabel *numberOfBeersInLabel;
 @property (weak, nonatomic) UIButton *calculateButton;
 @property (weak, nonatomic) UITapGestureRecognizer *hideKeyboardTapGestureRecognizer;
 
@@ -27,28 +27,26 @@
     UILabel *label = [[UILabel alloc ] init];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc ] init];
+    UILabel *quantityLabel = [[UILabel alloc] init];
     
     [self.view addSubview:textField];
     [self.view addSubview:slider];
     [self.view addSubview:label];
     [self.view addSubview:button];
     [self.view addGestureRecognizer:tap];
+    [self.view addSubview:quantityLabel];
     
     self.beerPercentTextField = textField;
     self.beerCountSlider = slider;
     self.resultLabel = label;
     self.calculateButton = button;
     self.hideKeyboardTapGestureRecognizer = tap;
-    
-    
+    self.numberOfBeersInLabel = quantityLabel;
 }
-
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.beerPercentTextField.delegate = self;
     self.beerPercentTextField.placeholder = NSLocalizedString(@"% Alcohol Content Per Beer", @"Beer percent placeholder text");
@@ -61,6 +59,8 @@
     [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     self.resultLabel.numberOfLines = 0;
+    self.title = NSLocalizedString(@"Wine", @"wine");
+    self.numberOfBeersInLabel.numberOfLines = 0;
     
 }
 
@@ -78,24 +78,26 @@
        viewWidth = screenBounds.size.height;
     }
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+    /*if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         
     } else {
         
-    }
-    
+    }*/
     
     CGFloat padding = 20;
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
     
-    self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame = CGRectMake(padding, padding + 100, itemWidth, itemHeight);
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
     self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding, itemWidth, itemHeight);
     
     CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
-    self.resultLabel.frame = CGRectMake(padding, bottomOfSlider + padding, itemWidth, itemHeight);
+    self.numberOfBeersInLabel.frame = CGRectMake(padding, bottomOfSlider + padding, itemWidth, itemHeight);
+    
+    CGFloat bottomOfNumberOfBeersInLabel = CGRectGetMaxY(self.numberOfBeersInLabel.frame);
+    self.resultLabel.frame = CGRectMake(padding, bottomOfNumberOfBeersInLabel + padding, itemWidth, itemHeight);
     
     CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
     self.calculateButton.frame = CGRectMake(padding, bottomOfLabel + padding, itemWidth, itemHeight);
@@ -121,7 +123,7 @@
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
-/*    int numberOfBeersShownOnLabel = self.beerCountSlider.value;
+    int numberOfBeersShownOnLabel = self.beerCountSlider.value;
     
     NSString *beerSliderPluralText;
     
@@ -131,7 +133,8 @@
         beerSliderPluralText = NSLocalizedString(@"beers", @"plural of beer");
     }
     NSString *beerSliderText = [NSString stringWithFormat:NSLocalizedString(@"%d %@", nil), numberOfBeersShownOnLabel, beerSliderPluralText];
-    self.numberOfBeersInLabel.text = beerSliderText; */
+    self.numberOfBeersInLabel.text = beerSliderText;
+    self.title = [NSString stringWithFormat:NSLocalizedString(@"%d Glasses of Wine", nil), numberOfBeersShownOnLabel];
 }
 
 
