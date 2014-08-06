@@ -134,7 +134,7 @@
     }
     NSString *beerSliderText = [NSString stringWithFormat:NSLocalizedString(@"%d %@", nil), numberOfBeersShownOnLabel, beerSliderPluralText];
     self.numberOfBeersInLabel.text = beerSliderText;
-    self.title = [NSString stringWithFormat:NSLocalizedString(@"%d Glasses of Wine", nil), numberOfBeersShownOnLabel];
+   // self.title = [NSString stringWithFormat:NSLocalizedString(@"%d Glasses of Wine", nil), numberOfBeersShownOnLabel];
 }
 
 
