@@ -52,7 +52,7 @@
 }
 
 -(void) whiskeyPressed: (UIButton *) sender {
-    BLCViewController *whiskeyVC = [[BLCViewController alloc] init];
+    BLCViewController *whiskeyVC = [[BLCWhiskeyViewController alloc] init];
     [self.navigationController pushViewController:whiskeyVC animated:YES];
 }
 
