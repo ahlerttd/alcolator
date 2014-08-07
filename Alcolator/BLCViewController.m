@@ -44,6 +44,16 @@
     self.numberOfBeersInLabel = quantityLabel;
 }
 
+- (instancetype) init {
+    self = [super init];
+    
+    if (self){
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+                                                                 }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,7 +69,6 @@
     [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     self.resultLabel.numberOfLines = 0;
-    self.title = NSLocalizedString(@"Wine", @"wine");
     self.numberOfBeersInLabel.numberOfLines = 0;
     
 }
@@ -134,6 +143,7 @@
     }
     NSString *beerSliderText = [NSString stringWithFormat:NSLocalizedString(@"%d %@", nil), numberOfBeersShownOnLabel, beerSliderPluralText];
     self.numberOfBeersInLabel.text = beerSliderText;
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
    // self.title = [NSString stringWithFormat:NSLocalizedString(@"%d Glasses of Wine", nil), numberOfBeersShownOnLabel];
 }
 
